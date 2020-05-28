@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .container
+    form(method='POST', action='/')
+      .form-group
+        label.small.text-muted.mb-1(for='Title')
+          | Title
+        input.form-control.form-control-bg(type='text', name='title', aria-describedby='helpId', placeholder='Title' required='')
+      .form-group
+        label.small.text-muted.mb-1(for='Body')
+          | Body
+        textarea.form-control.form-control-bg(name="body", type='text', cols="30", rows="10", placeholder='Body' required='')
+      .form-group
+        label.small.text-muted.mb-1(for='Author')
+          | Author 
+        input.form-control.form-control-bg(type='text', name='author', aria-describedby='helpId', placeholder='Name' required='')
+      button#pay-now.btn.btn-lg.btn-block(type='submit', name='sumbit') Submit
+
